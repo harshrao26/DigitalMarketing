@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white  fixed w-full z-10">
+    <nav className="bg-white fixed w-full z-10">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-[#FFC802]">Advert Furos</div>
