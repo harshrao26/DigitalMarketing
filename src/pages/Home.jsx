@@ -5,8 +5,12 @@ import HeroServices from "../components/HeroServices.jsx";
 import DifferentiatorsSection from "../components/DifferentiatorsSection.jsx";
 import DigitalServices from "../components/DigitalServices.jsx";
 import PRAgencySection from "../components/PRAgencySection.jsx";
-import BlogSection from "../components/BlogSection.jsx";
+import HeroBlog from "../components/HeroBlog.jsx";
+import TestimonialsMarquee from "../components/TestimonialsMarquee.jsx";
+import HeroFooter from "../components/HeroFooter.jsx";
 import AdvertisingSection from "../components/AdvertisingSection.jsx";
+import DigitalMarketingTraining from "../components/DigitalMarketingTraining.jsx";
+import Clients from "../components/Clients.jsx";
 const Home = () => {
   return (
     <div>
@@ -16,9 +20,14 @@ const Home = () => {
       <DifferentiatorsSection />
       <DigitalServices />
       <PRAgencySection />
+      <DigitalMarketingTraining />
       <AdvertisingSection />
 
-      <BlogSection />
+      <HeroFooter />
+      <TestimonialsMarquee />
+      <HeroBlog />
+
+      <Clients />
     </div>
   );
 };
