@@ -18,11 +18,11 @@ const Navbar = () => {
         {/* Links */}
         <div className="hidden md:flex space-x-2 text-sm">
           {[
-            { name: "Home", href: "#home" },
-            { name: "Services", href: "#services" },
-            { name: "Projects", href: "#projects" },
-            { name: "About Us", href: "#about" },
-            { name: "Career", href: "#career" },
+            { name: "Home", href: "/" },
+            { name: "Services", href: "/services" },
+            { name: "Projects", href: "/projects" },
+            { name: "About Us", href: "/about" },
+            { name: "Career", href: "/career" },
           ].map((link) => (
             <a
               key={link.href}

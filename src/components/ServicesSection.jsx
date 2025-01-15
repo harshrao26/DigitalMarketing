@@ -1,5 +1,7 @@
 import React from "react";
 import Card from "./Card";
+import EveryPageHero from "./EveryPageHero";
+import ModelForm from "./ModelForm";
 
 // Sample data from JSON
 const services = [
@@ -177,16 +179,38 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8">
-      {services.map((service, index) => (
-        <Card
-          key={index}
-          title={service.title}
-          description={service.description}
-          image={service.image}
-        />
-      ))}
-    </div>
+    <>
+      <EveryPageHero text="Services" />
+      <div className="px-8 mt-8">
+        <p className="text-4xl">
+          Develop, Advertise, and Advance <br /> with{" "}
+          <span className="font-semibold">Advert Furos</span>
+        </p>
+        <p>The best business consultancy in India</p>
+        <br />
+        <p>
+          We recognize how crucial it is to keep up an active internet presence.
+          With our extensive range of services, we can help you advertise your
+          brand, improve your search engine ranking with SEO, establish a
+          connection with your target and potential customers on social media,
+          raise brand awareness and identity, add a creative touch to your
+          website and posts with graphic design, create animation videos for all
+          your needs, and much more. By doing these things, you can boost your
+          sales and success rate at a reasonable cost.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8">
+        {services.map((service, index) => (
+          <Card
+            key={index}
+            title={service.title}
+            description={service.description}
+            image={service.image}
+          />
+        ))}
+      </div>
+      <ModelForm />
+    </>
   );
 };
 
