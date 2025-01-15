@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-r from-orange-500 to-yellow-500 text-white">
+    <section className="relative bg-gradient-to-r from-orange-500 to-yellow-500 flex flex-col items-center justify-center   pt-20 text-white">
       {/* Background */}
       <div className="absolute inset-0 w-full h-full bg-opacity-30"></div>
 
