@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./pages/Home.jsx";
 import HeroBlog from "./components/HeroBlog.jsx"; // Adjust the import path
 import BlogDetail from "./components/BlogDetail.jsx"; // Create BlogDetail component
+import Career from "./components/Career.jsx"; // Create BlogDetail component
 import ServicesSection from "./components/ServicesSection.jsx"; // Create BlogDetail component
 import { Link, Route, Routes } from "react-router-dom";
 
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<ServicesSection />} />
+        <Route path="/career" element={<Career />} />
         <Route
           path="/blog/digital-marketing-strategies"
           element={<BlogDetail title="Digital Marketing Strategies" />}
