@@ -1,63 +1,92 @@
-import React from "react";
-import { FaRegHandshake, FaUsers, FaClock, FaArrowRight } from "react-icons/fa";
+import React, { useEffect, useRef } from "react";
+import { FaArrowRight } from "react-icons/fa";
+import gsap from "gsap";
 
 const HeroSection = () => {
+  const headingRef = useRef(null);
+  const paragraphRef = useRef(null);
+  const buttonRefs = useRef([]);
+
+  useEffect(() => {
+    // Animate heading words
+    const headingWords = headingRef.current.querySelectorAll("span");
+    gsap.fromTo(
+      headingWords,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+        duration: 0.6,
+        ease: "power2.out",
+      }
+    );
+
+    // Animate paragraph
+    gsap.fromTo(
+      paragraphRef.current,
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, delay: 1, duration: 0.8, ease: "power2.out" }
+    );
+
+    // Animate buttons
+    gsap.fromTo(
+      buttonRefs.current,
+      { opacity: 0, scale: 0.8 },
+      {
+        opacity: 1,
+        scale: 1,
+        stagger: 0.3,
+        delay: 1.5,
+        duration: 0.6,
+        ease: "elastic.out(1, 0.75)",
+      }
+    );
+  }, []);
+
   return (
-    <section className="relative bg-gradient-to-r from-black to-zinc-800 flex flex-col items-center justify-center pt-20 text-white">
-    
+    <section className="bg-gradient-to-l h-screen pt-10 to-black from-[#ffc8022f] flex items-center justify-center text-white">
       {/* Content */}
-      <div className="relative container mx-auto flex flex-col items-center justify-center text-center py-20 px-6 lg:px-16">
+      <div className="container mx-auto flex flex-col items-center justify-center px-6 lg:px-16">
         {/* Main Heading */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fadeInUp">
-          Global Digital Marketing Services - SEO, PPC, & Social Media
+        <h1
+          ref={headingRef}
+          className="text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-semibold text-center mb-6"
+        >
+          {`Global Digital Marketing Services - SEO, PPC, & Social Media`
+            .split(" ")
+            .map((word, index) => (
+              <span key={index} className="inline-block mr-2">
+                {word}
+              </span>
+            ))}
         </h1>
-        <p className="text-xs sm:text-sm md:text-lg mb-6 animate-fadeInUp delay-200">
+
+        {/* Paragraph */}
+        <p
+          ref={paragraphRef}
+          className="text-xs sm:text-sm md:text-lg mb-6 text-center"
+        >
           Your trusted partner in global digital marketing. Expert in SEO, PPC,
           social media management, and content marketing. Elevate your brand
           worldwide!
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-10">
-          <button className="bg-white text-blue-600 px-6 py-3 rounded-md font-semibold shadow-md hover:scale-105 transition-transform duration-300">
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button
+            ref={(el) => (buttonRefs.current[0] = el)}
+            className="bg-[#FFD74B] text-black px-6 py-3 rounded-full font-semibold shadow-md hover:scale-105 transition-transform duration-300"
+          >
             Get Started
           </button>
-          <button className="bg-transparent border-2 border-white px-6 py-3 rounded-md font-semibold flex items-center gap-2 hover:bg-white hover:text-blue-600 transition-all duration-300">
+          <button
+            ref={(el) => (buttonRefs.current[1] = el)}
+            className="bg-transparent border-2 border-[#FFD74B] px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-[#FFD74B] hover:text-black transition-all duration-300"
+          >
             Learn More <FaArrowRight />
           </button>
         </div>
-
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 animate-fadeInUp delay-400">
-          <div className="flex flex-col items-center gap-4 text-center">
-            <FaRegHandshake className="text-5xl sm:text-6xl rounded-full font-extralight text-black p-2 bg-white" />
-            <h3 className="text-base sm:text-lg font-semibold">
-              Exceptional Service
-            </h3>
-            <p className="text-sm sm:text-base text-gray-100">
-              We go above and beyond to exceed your expectations.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center gap-4 text-center">
-            <FaUsers className="text-5xl sm:text-6xl rounded-full font-extralight text-black p-2 bg-white" />
-            <h3 className="text-base sm:text-lg font-semibold">
-              Great Teamwork
-            </h3>
-            <p className="text-sm sm:text-base text-gray-100">
-              Our collaborative approach ensures outstanding results.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center gap-4 text-center">
-            <FaClock className="text-5xl sm:text-6xl rounded-full font-extralight text-black p-2 bg-white" />
-            <h3 className="text-base sm:text-lg font-semibold">
-              Deliver On Time
-            </h3>
-            <p className="text-sm sm:text-base text-gray-100">
-              We meet deadlines without compromising on quality.
-            </p>
-          </div>
-        </div> */}
       </div>
     </section>
   );

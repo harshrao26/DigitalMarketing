@@ -10,13 +10,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white fixed w-full z-10">
+    <nav className="bg-whit  fixed w-full z-10">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-[#FFC802]">Advert Furos</div>
 
         {/* Links */}
-        <div className="hidden md:flex space-x-2 text-sm">
+        <div className="hidden md:flex space-x-2 text-base font-extrabold">
           {[
             { name: "Home", href: "/" },
             { name: "Services", href: "/services" },
@@ -30,7 +30,7 @@ const Navbar = () => {
               className={`py-2 px-4 rounded-full ${
                 activeLink === link.href
                   ? "bg-[#FFC802] text-white"
-                  : "text-gray-700 hover:text-[#FFC802]"
+                  : "text-white hover:text-[#FFC802]"
               }`}
               onClick={() => handleLinkClick(link.href)}
             >

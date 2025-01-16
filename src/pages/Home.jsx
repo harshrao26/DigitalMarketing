@@ -15,6 +15,8 @@ const Home = () => {
   return (
     <div>
       <HeroSection />
+      <Clients />
+
       <AboutSection />
       <HeroServices />
       <DifferentiatorsSection />
@@ -27,7 +29,6 @@ const Home = () => {
       <TestimonialsMarquee />
       <HeroBlog />
 
-      <Clients />
     </div>
   );
 };
