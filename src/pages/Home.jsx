@@ -11,11 +11,16 @@ import HeroFooter from "../components/HeroFooter.jsx";
 import AdvertisingSection from "../components/AdvertisingSection.jsx";
 import DigitalMarketingTraining from "../components/DigitalMarketingTraining.jsx";
 import Clients from "../components/Clients.jsx";
+import NewServices from "../components/NewServices.jsx";
+import StartAProject from "../components/StartAProject.jsx";
 const Home = () => {
   return (
     <div>
       <HeroSection />
       <Clients />
+
+      <NewServices />
+      <StartAProject />
 
       <AboutSection />
       <HeroServices />

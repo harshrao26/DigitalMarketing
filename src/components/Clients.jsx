@@ -24,18 +24,21 @@ const Marquee = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden h-96 flex flex-col justify-around px-8 bg-white">
+    <div className="overflow-hidden py-16 gap-16 flex flex-col justify-around px-8 bg-white">
       <div>
         <div className="flex items-end">
           <h2
             ref={textRef}
-            className="text-5xl font-semibold max-w-xl leading-none transition-all duration-500"
+            className="text-6xl font-semibold max-w-xl leading-tight transition-all duration-500"
           >
-            Client-Centric Digital Marketing Solutions Tailored for Global
-            Success
+            Client-Centric Digital Marketing Solutions Tailored for{" "} <br />
+            <span className="bg-yellow-300 font-semibold px-4">
+              {" "}
+              Global Success
+            </span>
           </h2>
-          <p className="text-xl uppercase border-b-2 border-[#FFD74B] hover:scale-110 transition-all ease-in-out ml-4">
-            Learn More
+          <p className="text-2xl uppercase border-b-2  border-[#FFD74B] hover:scale-110 transition-all ease-in-out ml-4">
+            Learn More About Us
           </p>
         </div>
       </div>
