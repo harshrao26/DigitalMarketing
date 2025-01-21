@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaCheck } from "react-icons/fa";
 import {
   FaSearch,
@@ -9,7 +9,8 @@ import {
   FaShoppingCart,
   FaMobileAlt,
 } from "react-icons/fa";
-import InfiniteMarquee from "./InfiniteMarquee";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const NewServices = () => {
   const data = [
@@ -85,6 +86,24 @@ const NewServices = () => {
     },
   ];
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".service-card").forEach((card) => {
+      gsap.from(card, {
+        opacity: 0,
+        y: 75,
+        duration: 1,
+        scrollTrigger: {
+          trigger: card,
+          start: "top 90%",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+    });
+  }, []);
+
   return (
     <div className="text-white flex flex-col space-y- px-8 py-8">
       {/* Top Section */}
@@ -112,7 +131,7 @@ const NewServices = () => {
         {data.map((service, index) => (
           <div
             key={index}
-            className=" rounded-lg p-6 shadow-md hover:shadow-base transition-all ease-in-out hover:shadow-[#3b3621]"
+            className="service-card rounded-[20px] p-6 shadow-md hover:shadow-base transition-all ease-in-out hover:shadow-[#3b362163]"
           >
             <div className="flex flex-col ">
               <p className="textxl">{service.icon}</p>

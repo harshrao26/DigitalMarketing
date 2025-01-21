@@ -18,7 +18,7 @@ const StartAProject = () => {
 
   return (
     <div
-      className="text-white px-8 h-96 flex flex-col justify-center relative"
+      className="text-white px-16 h-96 flex flex-col justify-center relative"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

@@ -24,7 +24,7 @@ const Marquee = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden py-16 gap-16 flex flex-col justify-around px-8 bg-white">
+    <div className="overflow-hidden py-16 gap-16 flex flex-col justify-around pl-8 bg-white">
       <div>
         <div className="flex items-end">
           <h2

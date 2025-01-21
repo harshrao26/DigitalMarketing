@@ -13,6 +13,8 @@ import DigitalMarketingTraining from "../components/DigitalMarketingTraining.jsx
 import Clients from "../components/Clients.jsx";
 import NewServices from "../components/NewServices.jsx";
 import StartAProject from "../components/StartAProject.jsx";
+import CaseStudy from "../components/CaseStudy.jsx";
+import Marquee from "../components/Marquee.jsx";
 const Home = () => {
   return (
     <div>
@@ -20,7 +22,9 @@ const Home = () => {
       <Clients />
 
       <NewServices />
+      <Marquee />
       <StartAProject />
+      <CaseStudy />
 
       <AboutSection />
       <HeroServices />
@@ -33,7 +37,6 @@ const Home = () => {
       <HeroFooter />
       <TestimonialsMarquee />
       <HeroBlog />
-
     </div>
   );
 };
