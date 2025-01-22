@@ -38,7 +38,7 @@ const CaseStudy = () => {
   return (
     <div className="bg-white pl-16 py-16 flex gap-8 h-screen overflow-hidden">
       {/* Left Section */}
-      <div className="w-1/2 sticky top-16 left-8 z-10 h-full flex flex-col gap-4 pr-8">
+      <div className="w-1/2 sticky top-16 left-0 z-10 h-full flex flex-col gap-4 pr-8">
         <p className="text-lg">Our Works</p>
         <p className="text-6xl font-semibold max-w-xl transition-all duration-500">
           Case Studies, a selection of successful projects.

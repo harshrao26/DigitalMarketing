@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import logowhite from "../assets/logowhite.png";
+import logoblack from "../assets/logoblack.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("#home"); // Track the active link
@@ -13,7 +14,9 @@ const Navbar = () => {
     <nav className="bg-whit  fixed w-full z-10">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold text-[#FFC802]">Advert Furos</div>
+        <div className="text-2xl font-bold text-[#FFC802]">
+          <img src={logowhite} alt="" className="h-8"/>
+        </div>
 
         {/* Links */}
         <div className="hidden md:flex space-x-2 text-base font-extrabold">

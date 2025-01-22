@@ -15,6 +15,7 @@ import NewServices from "../components/NewServices.jsx";
 import StartAProject from "../components/StartAProject.jsx";
 import CaseStudy from "../components/CaseStudy.jsx";
 import Marquee from "../components/Marquee.jsx";
+import Info from "../components/Info.jsx";
 const Home = () => {
   return (
     <div>
@@ -25,7 +26,11 @@ const Home = () => {
       <Marquee />
       <StartAProject />
       <CaseStudy />
+      <Info />
 
+
+
+{/* old */}
       <AboutSection />
       <HeroServices />
       <DifferentiatorsSection />
