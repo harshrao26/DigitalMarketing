@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import gsap from "gsap";
-
+import Hero from "../assets/hero.gif";
 const HeroSection = () => {
   const headingRef = useRef(null);
   const paragraphRef = useRef(null);
@@ -45,15 +45,23 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-l h-screen pt-10 to-black from-[#ffc8022f] flex items-center justify-center text-white">
+    <section
+      className="bg-gradient-to-l h-screen pt-10 to-black from-[#ffc8022f] flex items-center justify-center text-white overflow-x-hidden"
+      style={{
+        backgroundImage: `url(${Hero})`,
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: " center",
+      }}
+    >
       {/* Content */}
       <div className="container mx-auto flex flex-col items-center justify-center px-6 lg:px-16">
         {/* Main Heading */}
         <h1
           ref={headingRef}
-          className="text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-semibold text-center mb-6"
+          className="text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-semibold text-center max-w-6xl mb-6"
         >
-          {`Global Digital Marketing Services - SEO, PPC, & Social Media`
+          {`Global Digital Website Marketing Services - SEO, PPC, & Social Media`
             .split(" ")
             .map((word, index) => (
               <span key={index} className="inline-block mr-2">
@@ -65,7 +73,7 @@ const HeroSection = () => {
         {/* Paragraph */}
         <p
           ref={paragraphRef}
-          className="text-xs sm:text-sm md:text-lg mb-6 text-center"
+          className="text-xs sm:text-sm md:text-lg mb-6 text-center max-w-8xl"
         >
           Your trusted partner in global digital marketing. Expert in SEO, PPC,
           social media management, and content marketing. Elevate your brand

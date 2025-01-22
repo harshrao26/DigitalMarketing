@@ -80,7 +80,7 @@ const DigitalServices = () => {
         {/* Right Side Image */}
         <div className="relative">
           <img
-            src="https://via.placeholder.com/600x400"
+            src="https://i.pinimg.com/originals/4e/d0/ce/4ed0ced35bb59c608dd31d8b2860a986.gif"
             alt="Digital Services"
             className="w-full h-full object-cover rounded-lg shadow-lg"
           />

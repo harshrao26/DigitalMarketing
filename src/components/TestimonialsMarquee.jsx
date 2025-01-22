@@ -4,25 +4,55 @@ import { FaStar } from "react-icons/fa";
 const TestimonialsMarquee = () => {
   const testimonials = [
     {
-      name: "Amit Sharma",
-      stars: 5,
-      message:
-        "Amazing service! Truly remarkable work. Their team's attention to detail and customer-centric approach made all the difference for our project. Highly recommend them!",
-    },
-    {
-      name: "Priya Patel",
+      name: "Harper Adams",
       stars: 4,
       message:
         "Great experience! They know their digital marketing. They helped us boost our online presence and get results that exceeded our expectations.",
     },
     {
-      name: "Ravi Kumar",
+      name: "Arya Oberoi",
       stars: 5,
       message:
         "The best agency I've worked with. Highly recommend! Their strategy and execution are second to none. Our business growth since working with them has been phenomenal.",
     },
     {
-      name: "Neha Gupta",
+      name: "Olivia Harris",
+      stars: 4,
+      message:
+        "Professional and efficient. Satisfied with their work. They ensured timely delivery and excellent quality, making the whole process seamless.",
+    },
+    {
+      name: "Zahra Al-Hashemi",
+      stars: 5,
+      message:
+        "Advert Furos helped our brand grow exponentially. They provide comprehensive digital marketing solutions that made a huge impact on our overall brand strategy.",
+    },
+    {
+      name: "Sneha Iyer",
+      stars: 4,
+      message:
+        "Fantastic team with great knowledge of digital marketing. They delivered results beyond our expectations and always kept us informed every step of the way.",
+    },
+    {
+      name: "Amelia Hall",
+      stars: 5,
+      message:
+        "Amazing service! Truly remarkable work. Their team's attention to detail and customer-centric approach made all the difference for our project. Highly recommend them!",
+    },
+    {
+      name: "Harper Adams",
+      stars: 4,
+      message:
+        "Great experience! They know their digital marketing. They helped us boost our online presence and get results that exceeded our expectations.",
+    },
+    {
+      name: "Arham Sheikh",
+      stars: 5,
+      message:
+        "The best agency I've worked with. Highly recommend! Their strategy and execution are second to none. Our business growth since working with them has been phenomenal.",
+    },
+    {
+      name: "Olivia Harris",
       stars: 4,
       message:
         "Professional and efficient. Satisfied with their work. They ensured timely delivery and excellent quality, making the whole process seamless.",
@@ -40,73 +70,43 @@ const TestimonialsMarquee = () => {
         "Fantastic team with great knowledge of digital marketing. They delivered results beyond our expectations and always kept us informed every step of the way.",
     },
     {
-      name: "Amit Sharma",
+      name: "Amelia Hall",
       stars: 5,
       message:
         "Amazing service! Truly remarkable work. Their team's attention to detail and customer-centric approach made all the difference for our project. Highly recommend them!",
     },
     {
-      name: "Priya Patel",
+      name: "Harper Adams",
       stars: 4,
       message:
         "Great experience! They know their digital marketing. They helped us boost our online presence and get results that exceeded our expectations.",
     },
     {
-      name: "Ravi Kumar",
+      name: "Noah Carter",
       stars: 5,
       message:
         "The best agency I've worked with. Highly recommend! Their strategy and execution are second to none. Our business growth since working with them has been phenomenal.",
     },
     {
-      name: "Neha Gupta",
+      name: "Aya Al-Khatib",
       stars: 4,
       message:
         "Professional and efficient. Satisfied with their work. They ensured timely delivery and excellent quality, making the whole process seamless.",
     },
     {
-      name: "Rajesh Yadav",
-      stars: 5,
-      message:
-        "Advert Furos helped our brand grow exponentially. They provide comprehensive digital marketing solutions that made a huge impact on our overall brand strategy.",
-    },
-    {
-      name: "Sneha Iyer",
-      stars: 4,
-      message:
-        "Fantastic team with great knowledge of digital marketing. They delivered results beyond our expectations and always kept us informed every step of the way.",
-    },
-    {
-      name: "Amit Sharma",
+      name: "Riaan Sethi",
       stars: 5,
       message:
         "Amazing service! Truly remarkable work. Their team's attention to detail and customer-centric approach made all the difference for our project. Highly recommend them!",
     },
     {
-      name: "Priya Patel",
-      stars: 4,
-      message:
-        "Great experience! They know their digital marketing. They helped us boost our online presence and get results that exceeded our expectations.",
-    },
-    {
-      name: "Ravi Kumar",
-      stars: 5,
-      message:
-        "The best agency I've worked with. Highly recommend! Their strategy and execution are second to none. Our business growth since working with them has been phenomenal.",
-    },
-    {
-      name: "Neha Gupta",
-      stars: 4,
-      message:
-        "Professional and efficient. Satisfied with their work. They ensured timely delivery and excellent quality, making the whole process seamless.",
-    },
-    {
-      name: "Rajesh Yadav",
+      name: "Layla Al-Fahad",
       stars: 5,
       message:
         "Advert Furos helped our brand grow exponentially. They provide comprehensive digital marketing solutions that made a huge impact on our overall brand strategy.",
     },
     {
-      name: "Sneha Iyer",
+      name: "Ira Reddy",
       stars: 4,
       message:
         "Fantastic team with great knowledge of digital marketing. They delivered results beyond our expectations and always kept us informed every step of the way.",

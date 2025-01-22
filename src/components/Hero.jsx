@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import heroimg from '../assets/heroimg.png'
+import hero from '../assets/hero.gif'
 import sm from '../assets/sm.png'
 const HeroSection = () => {
   return (
-    <section className="bg-white relative flex items-center justify-center h-screen ">
+    <section className="bg-white relative flex items-center justify-center h-screen " 
+    style={{ backgroundImage: `url(${hero})` }} >
       <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 py-12 md:py-20 gap-8">
         {/* Left Content */}
         <div className="flex-1">
