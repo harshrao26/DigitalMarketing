@@ -1,9 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logowhite from "../assets/logowhite.png";
 import logoblack from "../assets/logoblack.png";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("#home"); // Track the active link
+  const [activeLink, setActiveLink] = useState("#home");
+  const [isScrolled, setIsScrolled] = useState(false); // Track if scrolled
+
+  // Handle scroll event
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true); // Change background when scrolled
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
@@ -11,11 +30,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-whit  fixed w-full z-10">
+    <nav
+      className={`fixed w-full z-10 transition-all duration-300 ${
+        isScrolled ? "bg-black" : "p"
+      }`}
+    >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-[#FFC802]">
-          <img src={logowhite} alt="" className="h-8"/>
+          <img src={logowhite} alt="" className="h-8" />
         </div>
 
         {/* Links */}

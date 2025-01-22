@@ -114,9 +114,9 @@ const TestimonialsMarquee = () => {
   ];
 
   return (
-    <div className="bg-gray-100 py-8">
+    <div className="bg-white py-8">
       <div className="max-w-screen-xl mx-auto">
-        <h2 className="text-3xl text-center font-bold text-gray-800 mb-6">
+        <h2 className="text-4xl text-center font-bold text-gray-800 mb-6">
           What Our Clients Say
         </h2>
         <div className="overflow-hidden">
@@ -124,7 +124,7 @@ const TestimonialsMarquee = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="w-80 h- p-6 bg-white shadow-lg rounded-lg transform hover:scale-105 transition-transform duration-300 flex-shrink-0"
+                className="w-80 h- py-4 px-8 bg-white border-[1px] border-zinc-200 rounded-2xl transform hover:scale-105 transition-transform duration-300 flex-shrink-0"
               >
                 <div className="flex items-center mb-2">
                   {/* Name */}
@@ -132,14 +132,14 @@ const TestimonialsMarquee = () => {
                     {testimonial.name}
                   </span>
                   {/* Stars */}
-                  <div className="flex text-yellow-400">
+                  <div className="flex text-[#ffd74b]">
                     {Array.from({ length: testimonial.stars }).map((_, i) => (
                       <FaStar key={i} />
                     ))}
                   </div>
                 </div>
                 {/* Message */}
-                <p className="text-sm text-gray-600 whitespace-normal break-words">
+                <p className="text-xs text-gray-600 whitespace-normal break-words">
                   {testimonial.message}
                 </p>
               </div>
@@ -147,7 +147,6 @@ const TestimonialsMarquee = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };

@@ -2,22 +2,25 @@ import React from "react";
 
 const DigitalServices = () => {
   return (
-    <div className="py-10 px-4 bg-gray-50">
+    <div className="py-10 px-16 bg-black">
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Side Content */}
         <div>
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-            Taking Your Business Ahead with these Digital Services
+          <h1 className="text-2xl md:text-4xl font-semibold text-white mb-6">
+            Taking Your Business Ahead with{" "}
+            <span className="text-[#FFD74B] font-semibold ">
+              Digital Services
+            </span>
           </h1>
           <div className="space-y-6">
             {/* Row for SEO and SMO */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* SEO Service */}
-              <div className="flex flex-col bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 ease-in-out">
-                <h2 className="text-lg md:text-lg font-semibold text-gray-800 mb-2">
+              <div className="flex flex-col bg-black border-[1px] border-zinc-800 shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-lg md:text-lg font-semibold text-white mb-2">
                   Taking Your Business Ahead with SEO
                 </h2>
-                <p className="text-xs md:text-sm text-gray-600">
+                <p className="text-xs md:text-sm text-gray-400">
                   Best digital marketing company, HomeSEO not only helps to
                   improve your website user experience but also helps to
                   increase your brand’s awareness & your website ranking in
@@ -28,11 +31,11 @@ const DigitalServices = () => {
               </div>
 
               {/* SMO Service */}
-              <div className="flex flex-col bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 ease-in-out">
-                <h2 className="text-lg md:text-lg font-semibold text-gray-800 mb-2">
+              <div className="flex flex-col bg-black border-[1px] border-zinc-800 shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-lg md:text-lg font-semibold text-white mb-2">
                   Taking Your Business Ahead with SMO
                 </h2>
-                <p className="text-xs md:text-sm text-gray-600">
+                <p className="text-xs md:text-sm text-gray-400">
                   Best digital marketing company, HomeSMO increases the online
                   conformity of the customers and therefore helps to increase
                   sales and increase profits. It helps to create your brand
@@ -45,11 +48,11 @@ const DigitalServices = () => {
             {/* Row for WhatsApp Chatbot and Website Development */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* WhatsApp Chatbot Service */}
-              <div className="flex flex-col bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 ease-in-out">
-                <h2 className="text-lg md:text-lg font-semibold text-gray-800 mb-2">
+              <div className="flex flex-col bg-black border-[1px] border-zinc-800 shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-lg md:text-lg font-semibold text-white mb-2">
                   Taking Your Business Ahead with WhatsApp Chatbot
                 </h2>
-                <p className="text-xs md:text-sm text-gray-600">
+                <p className="text-xs md:text-sm text-gray-400">
                   Best digital marketing company, HomeBusinesses may use Digital
                   Jugglers WhatsApp chatbot services to improve customer
                   experiences, maximize tasks, and drive corporate growth by
@@ -58,11 +61,11 @@ const DigitalServices = () => {
               </div>
 
               {/* Website Development Service */}
-              <div className="flex flex-col bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 ease-in-out">
-                <h2 className="text-lg md:text-lg font-semibold text-gray-800 mb-2">
+              <div className="flex flex-col bg-black border-[1px] border-zinc-800 shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-lg md:text-lg font-semibold text-white mb-2">
                   Taking Your Business Ahead with Website Development
                 </h2>
-                <p className="text-xs md:text-sm text-gray-600">
+                <p className="text-xs md:text-sm text-gray-400">
                   Best digital marketing company, HomeWebsite development is a
                   way to make people aware of the services and/or products you
                   are offering, and see which of your company’s qualities set it

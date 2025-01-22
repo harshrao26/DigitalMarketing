@@ -32,20 +32,19 @@ const Home = () => {
       <WeWorkWith />
       <LetsTalk />
 
-
-
-{/* old */}
-      <AboutSection />
-      <HeroServices />
-      <DifferentiatorsSection />
-      <DigitalServices />
-      <PRAgencySection />
-      <DigitalMarketingTraining />
-      <AdvertisingSection />
-
-      <HeroFooter />
+      {/* old */}
+      {/* <AboutSection /> */}
+      {/* <HeroServices /> */}
+      {/* <DifferentiatorsSection /> */}
       <TestimonialsMarquee />
-      <HeroBlog />
+
+      <DigitalServices />
+      {/* <PRAgencySection /> */}
+      {/* <DigitalMarketingTraining /> */}
+      {/* <AdvertisingSection /> */}
+
+      {/* <HeroFooter /> */}
+      {/* <HeroBlog /> */}
     </div>
   );
 };
