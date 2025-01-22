@@ -64,14 +64,17 @@ const Footer = () => {
               <strong>India:</strong> 1st Floor LHPS Building, Sector-7, Vikas
               Nagar, Lucknow-226022
               <br />
-              {/* <strong>Contact:</strong> +91-7007016231 */}
+              <strong>Contact:</strong> +91-7007016231
             </p>
             <p>
               <strong>Dubai:</strong> Building A1, Dubai Digital Park, Dubai
               Silicon Oasis, Dubai, UAE
               <br />
-              {/* <strong>Contact:</strong> +91-9721080912 */}
+              <strong>Contact:</strong> +91-9721080912
             </p>
+          </div>
+          <div className="mt-6  text-black/90 text-2xl">
+            advertfuros@gmail.com
           </div>
         </div>
       </div>
