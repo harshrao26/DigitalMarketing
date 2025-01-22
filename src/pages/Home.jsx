@@ -16,6 +16,8 @@ import StartAProject from "../components/StartAProject.jsx";
 import CaseStudy from "../components/CaseStudy.jsx";
 import Marquee from "../components/Marquee.jsx";
 import Info from "../components/Info.jsx";
+import WeWorkWith from "../components/WeWorkWith.jsx";
+import LetsTalk from "../components/LetsTalk.jsx";
 const Home = () => {
   return (
     <div>
@@ -27,6 +29,8 @@ const Home = () => {
       <StartAProject />
       <CaseStudy />
       <Info />
+      <WeWorkWith />
+      <LetsTalk />
 
 
 
