@@ -8,11 +8,7 @@ const Footer = () => {
         {/* Logo and Description */}
         <div className="col-span-2 flex flex-col">
           <div className="flex items-center mb-4">
-            <img
-              src={logoblack}
-              alt="Logo"
-              className=" h-10 mr-3 "
-            />
+            <img src={logoblack} alt="Logo" className=" h-10 mr-3 " />
           </div>
           <p className="mb-6 text-sm text-black/90 leading-relaxed">
             Helping property owners, entrepreneurs, and real estate
@@ -32,7 +28,7 @@ const Footer = () => {
               (link, index) => (
                 <li
                   key={index}
-                  className="hover:underline cursor-pointer transition hover:text-yellow-200"
+                  className="hover:underline cursor-pointer transition hover:text-zinc-600"
                 >
                   {link}
                 </li>
@@ -48,7 +44,7 @@ const Footer = () => {
             {["Blog", "Training", "Contact Us"].map((link, index) => (
               <li
                 key={index}
-                className="hover:underline cursor-pointer transition hover:text-yellow-200"
+                className="hover:underline cursor-pointer transition hover:text-zinc-600"
               >
                 {link}
               </li>
@@ -82,7 +78,8 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="mt-12 border-t border-black/50 pt-6 text-center px-16 lg:flex lg:justify-between lg:items-center text-sm text-black/80">
         <p className="mb-6 lg:mb-0">
-          Privacy Policy | Terms and Conditions | Sitemap | © 2019 - 2025 Advert Furos
+          Privacy Policy | Terms and Conditions | Sitemap | © 2019 - 2025 Advert
+          Furos
         </p>
         <div className="flex justify-center space-x-6">
           <a href="#" className="hover:text-gray-950 transition">

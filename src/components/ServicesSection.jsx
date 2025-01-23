@@ -181,7 +181,7 @@ const Services = () => {
   return (
     <>
       <EveryPageHero text="Services" />
-      <div className="px-8 mt-8">
+      <div className="px-8 mt-8 bg-white py-16">
         <p className="text-4xl">
           Develop, Advertise, and Advance <br /> with{" "}
           <span className="font-semibold">Advert Furos</span>
@@ -199,7 +199,7 @@ const Services = () => {
           sales and success rate at a reasonable cost.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8 bg-white">
         {services.map((service, index) => (
           <Card
             key={index}
