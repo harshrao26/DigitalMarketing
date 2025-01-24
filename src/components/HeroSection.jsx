@@ -77,7 +77,7 @@ const HeroSection = () => {
         {/* Main Heading */}
         <h1
           ref={headingRef}
-          className="text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-semibold text-center max-w-6xl mb-6"
+          className="text-4xl sm:text-4xl md:text-5xl lg:text-8xl font-semibold text-center max-w-6xl mb-6"
         >
           {`Global Digital Website Marketing Services - SEO, PPC, & Social Media`
             .split(" ")

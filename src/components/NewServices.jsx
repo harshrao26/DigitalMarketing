@@ -127,7 +127,7 @@ const NewServices = () => {
         {data.map((service, index) => (
           <div
             key={index}
-            className="service-card rounded-[20px] py-6 shadow-md hover:shadow-lg transition-all ease-in-out hover:shadow-[#3b362163] "
+            className="service-card rounded-[20px] md:py-6 lg:py-6 p-6 shadow-md hover:shadow-lg transition-all ease-in-out hover:shadow-[#3b362163] "
           >
             <div className="flex flex-col">
               <p className="text-xl">{service.icon}</p>
