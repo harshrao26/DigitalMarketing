@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import inq from '../assets/inq.png'
+import inq from "../assets/inq.png";
+
 const services = [
   "Application Development",
-  "yellow 4ick Verification",
+  "Yellow Tick Verification",
   "Brand Identity",
   "Branding Videos",
   "Customized Software",
@@ -50,26 +51,23 @@ const MarketingForm = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row pt-20 bg-white">
+    <div className="flex flex-col lg:flex-row  bg-white">
       {/* Left Side Image */}
-      <div className="w-full lg:w-1/2 bg-white flex items-center justify-center">
+      <div className="w-full lg:w-1/2 bg-gray-50 flex items-center justify-center px-4 ">
         <img
-          src={inq} // Replace with your image URL
+          src={inq}
           alt="Marketing Illustration"
-          className=" h-96 object-cover"
+          className="h-72 lg:h-96 max-w-full object-contain"
         />
       </div>
 
       {/* Right Side Form */}
-      <div className="w-full lg:w-1/2 bg-white flex items-center justify-center px-6 lg:px-20 py-10">
-        <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-6">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-4">
+      <div className="w-full lg:w-1/2 bg-white flex items-center justify-center px-4 lg:px-12 ">
+        <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-4">
+          <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 text-center">
             Request a Service
           </h2>
-          <p className="text-gray-600 text-center mb-8">
-            Let's help grow your business with our premium services.
-          </p>
-
+         
           {/* Name Input */}
           <div>
             <label

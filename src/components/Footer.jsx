@@ -1,6 +1,8 @@
 import React from "react";
 import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import logoblack from "../assets/logoblack.png";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-tr from-white to-[#b9babd] text-black py-12">
@@ -11,9 +13,7 @@ const Footer = () => {
             <img src={logoblack} alt="Logo" className=" h-10 mr-3 " />
           </div>
           <p className="mb-6 text-sm text-black/90 leading-relaxed">
-            Helping property owners, entrepreneurs, and real estate
-            professionals transform and matchmake spaces into profitable
-            coworking businesses.
+         A multi award-winning Full Service Digital Marketing Agency providing a broad spectrum of digital solutions. Our headquarters are in the UK, with branches in multiple locations around the world.
           </p>
           <button className="px-6 py-2 bg-black text-[#FFD74B] font-semibold rounded-md transition">
             Learn More
@@ -21,25 +21,25 @@ const Footer = () => {
         </div>
 
         {/* Quick Links */}
-        <div>
+         <div>
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            {["About Us", "Services", "Portfolio", "Careers"].map(
-              (link, index) => (
-                <li
-                  key={index}
+            {["About", "Services", "Career"].map((link, index) => (
+              <li key={index}>
+                <Link
+                  to={`/${link.toLowerCase().replace(" ", "-")}`}
                   className="hover:underline cursor-pointer transition hover:text-zinc-600"
                 >
                   {link}
-                </li>
-              )
-            )}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Menu */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Menu</h3>
+          {/* <h3 className="text-lg font-semibold mb-4">Menu</h3>
           <ul className="space-y-2">
             {["Blog", "Training", "Contact Us"].map((link, index) => (
               <li
@@ -49,7 +49,7 @@ const Footer = () => {
                 {link}
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
 
         {/* Address */}

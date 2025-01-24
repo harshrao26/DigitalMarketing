@@ -1,9 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBriefcase, FaEnvelope, FaPhoneAlt, FaFileAlt } from "react-icons/fa";
 import { IoMdPeople } from "react-icons/io";
 import { MdWork } from "react-icons/md";
 
 const CareerPage = () => {
+
+    useEffect(() => {
+    // Ensure scrolling to the top of the document when the component is mounted
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // You can use "auto" for instant scroll
+    });
+
+    // As a fallback, scroll the root element
+    document.documentElement.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,9 +42,9 @@ const CareerPage = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50  ">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 px-6">
+      <div className="bg-gradient-to-r flex items-center justify-center flex-col from-blue-500 to-indigo-600 text-white py-20 px-6 h-80">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Join Our Team</h1>
           <p className="text-lg">

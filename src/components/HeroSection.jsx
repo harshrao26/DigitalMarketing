@@ -91,7 +91,7 @@ const HeroSection = () => {
         {/* Paragraph */}
         <p
           ref={paragraphRef}
-          className="text-xs sm:text-sm md:text-lg mb-6 text-center max-w-8xl"
+          className="text-sm sm:text-sm md:text-lg mb-6 text-center max-w-8xl"
         >
           Your trusted partner in global digital marketing. Expert in SEO, PPC,
           social media management, and content marketing. Elevate your brand

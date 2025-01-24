@@ -103,6 +103,19 @@ const NewServices = () => {
       });
     });
   }, []);
+    useEffect(() => {
+    // Ensure scrolling to the top of the document when the component is mounted
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // You can use "auto" for instant scroll
+    });
+
+    // As a fallback, scroll the root element
+    document.documentElement.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <div className="text-white flex flex-col px-4 md:px-16 py-8">
