@@ -1,8 +1,14 @@
 import React, { useState } from "react";
+import ModelForm from "./ModelForm";
 
 const StartAProject = () => {
   const [circlePosition, setCirclePosition] = useState({ x: 0, y: 0 });
   const [showCircle, setShowCircle] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("/");
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   const handleMouseMove = (e) => {
     setCirclePosition({ x: e.clientX, y: e.clientY });
@@ -14,6 +20,10 @@ const StartAProject = () => {
 
   const handleMouseLeave = () => {
     setShowCircle(false);
+  };
+    const handleLinkClick = (link) => {
+    setActiveLink(link);
+    setIsOpen(false);
   };
 
   return (
@@ -51,7 +61,9 @@ const StartAProject = () => {
         </div>
       )}
       <div>
-        <button className="text-4xl md:text-6xl font-semibold max-w-full md:max-w-xl leading-tight transition-all duration-500 mb-4 hover:scale-105 hover:text-[#ffd74b]">
+        <button
+        onClick={() => setIsModalOpen(true)}
+        className="text-4xl md:text-6xl underline font-semibold pb-4 max-w-full md:max-w-xl leading-tight transition-all duration-500 mb-4 hover:scale-105 hover:text-[#ffd74b]">
           Start A Project
         </button>
         <p className="max-w-full md:max-w-xl text-base md:text-xl">
@@ -60,6 +72,19 @@ const StartAProject = () => {
           If so, make contact with us today…
         </p>
       </div>
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[200]">
+          <div className="bg-white p-6 rounded-lg shadow-lg relative">
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-2 right-4 text-gray-700 text-xl font-semibold"
+            >
+              X
+            </button>
+            <ModelForm />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

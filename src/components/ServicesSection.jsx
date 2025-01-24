@@ -181,7 +181,7 @@ const Services = () => {
   return (
     <>
       <EveryPageHero text="Services" />
-      <div className="px-8 mt-8 bg-white py-16">
+      <div className="px-16 mt-8 bg-white py-16">
         <p className="text-4xl">
           Develop, Advertise, and Advance <br /> with{" "}
           <span className="font-semibold">Advert Furos</span>

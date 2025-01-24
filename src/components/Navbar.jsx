@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("#home");
+  const [activeLink, setActiveLink] = useState("/");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -71,7 +71,7 @@ const Navbar = () => {
         {/* Contact Us Button */}
         <button
           className={`hidden md:block py-2 px-4 rounded-full ${
-            activeLink === "#contact"
+            activeLink === "/contact"
               ? "bg-[#FFC802] text-white"
               : "bg-gray-200 hover:bg-[#FFC802] text-gray-700"
           }`}

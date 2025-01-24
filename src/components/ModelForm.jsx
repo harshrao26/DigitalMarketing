@@ -44,10 +44,33 @@ const MarketingForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Form submitted successfully!");
-    console.log(formData);
+
+    try {
+      // Send form data to the webhook
+      const response = await fetch(
+        "https://hook.eu2.make.com/ilw1pnibxprrp7myykfsy1ikekvuwvo7",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        console.log("Form data sent:", formData);
+        setFormData({ name: "", email: "", contact: "", service: "" }); // Reset form
+      } else {
+        alert("Failed to submit the form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred while submitting the form.");
+    }
   };
 
   return (
@@ -67,7 +90,7 @@ const MarketingForm = () => {
           <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 text-center">
             Request a Service
           </h2>
-         
+
           {/* Name Input */}
           <div>
             <label
@@ -148,7 +171,7 @@ const MarketingForm = () => {
                 Select a service
               </option>
               {services.map((service, index) => (
-                <option key={index} value={service}>
+                <option key={index} value={service}  className="text-black">
                   {service}
                 </option>
               ))}
@@ -159,7 +182,7 @@ const MarketingForm = () => {
           <div>
             <button
               type="submit"
-              className="w-full bg-black text-white py-3 px-4 rounded-md shadow-sm hover:bg-[#ffd74b] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffd74b]"
+              className="w-full bg-black text-white py-2 px-4 rounded-md shadow-sm hover:bg-[#ffd74b] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffd74b]"
             >
               Submit
             </button>
