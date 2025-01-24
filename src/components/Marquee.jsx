@@ -35,7 +35,7 @@ const marqueeItems = [
 
 const Marquee = () => {
   return (
-    <div className="marquee-container mb-3 bg-white">
+    <div className="marquee-container mt-8 bg-white">
       <div className="marquee-content ">
         {marqueeItems.map((item, index) => (
           <div className="marquee-item" key={index}>

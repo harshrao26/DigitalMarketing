@@ -67,13 +67,13 @@ const Navbar = () => {
 
         {/* Contact Us Button */}
         <a
-          href="#contact"
-          className={`hidden md:block py-2 px-4 rounded-lg ${
+          href="/contact"
+          className={`hidden md:block py-2 px-4 rounded-full ${
             activeLink === "#contact"
               ? "bg-[#FFC802] text-white"
               : "bg-gray-200 hover:bg-[#FFC802] text-gray-700"
           }`}
-          onClick={() => handleLinkClick("#contact")}
+          onClick={() => handleLinkClick("/contact")}
         >
           Contact Us
         </a>
@@ -124,11 +124,11 @@ const Navbar = () => {
         <div className="md:hidden bg-white shadow-md">
           <div className="flex flex-col items-center space-y-4 py-4">
             {[
-              { name: "Home", href: "#home" },
-              { name: "Services", href: "#services" },
-              { name: "Projects", href: "#projects" },
-              { name: "About Us", href: "#about" },
-              { name: "Career", href: "#career" },
+              { name: "Home", href: "/home" },
+              { name: "Services", href: "/services" },
+              { name: "Projects", href: "/projects" },
+              { name: "About Us", href: "/about" },
+              { name: "Career", href: "/career" },
             ].map((link) => (
               <a
                 key={link.href}

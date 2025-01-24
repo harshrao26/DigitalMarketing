@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import inq from '../assets/inq.png'
 const services = [
   "Application Development",
   "yellow 4ick Verification",
@@ -50,13 +50,13 @@ const MarketingForm = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row ">
+    <div className="flex flex-col lg:flex-row pt-20 bg-white">
       {/* Left Side Image */}
-      <div className="w-full lg:w-1/2 bg-gradient-to-br from-yellow-400 to-indigo-600 flex items-center justify-center">
+      <div className="w-full lg:w-1/2 bg-white flex items-center justify-center">
         <img
-          src="https://via.placeholder.com/600x800" // Replace with your image URL
+          src={inq} // Replace with your image URL
           alt="Marketing Illustration"
-          className="w-full h-auto object-cover"
+          className=" h-96 object-cover"
         />
       </div>
 
@@ -86,7 +86,7 @@ const MarketingForm = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-yellow-400 focus:border-yellow-400 sm:text-sm"
+              className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-[#ffd74b] focus:border-[#ffd74b] sm:text-sm"
             />
           </div>
 
@@ -106,7 +106,7 @@ const MarketingForm = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-yellow-400 focus:border-yellow-400 sm:text-sm"
+              className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-[#ffd74b] focus:border-[#ffd74b] sm:text-sm"
             />
           </div>
 
@@ -126,7 +126,7 @@ const MarketingForm = () => {
               value={formData.contact}
               onChange={handleChange}
               required
-              className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-yellow-400 focus:border-yellow-400 sm:text-sm"
+              className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-[#ffd74b] focus:border-[#ffd74b] sm:text-sm"
             />
           </div>
 
@@ -144,7 +144,7 @@ const MarketingForm = () => {
               value={formData.service}
               onChange={handleChange}
               required
-              className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-yellow-400 focus:border-yellow-400 sm:text-sm"
+              className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-[#ffd74b] focus:border-[#ffd74b] sm:text-sm"
             >
               <option value="" disabled>
                 Select a service
@@ -161,7 +161,7 @@ const MarketingForm = () => {
           <div>
             <button
               type="submit"
-              className="w-full bg-yellow-400 text-white py-3 px-4 rounded-md shadow-sm hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400"
+              className="w-full bg-black text-white py-3 px-4 rounded-md shadow-sm hover:bg-[#ffd74b] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffd74b]"
             >
               Submit
             </button>

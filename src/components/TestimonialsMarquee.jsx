@@ -114,32 +114,35 @@ const TestimonialsMarquee = () => {
   ];
 
   return (
-    <div className="bg-white py-8">
-      <div className="max-w-screen-xl mx-auto">
-        <h2 className="text-4xl text-center font-bold text-gray-800 mb-6">
+ <div className="bg-white py-12">
+      <div className="max-w-screen-xl mx-auto px-6 sm:px-8">
+        {/* Heading */}
+        <h2 className="text-3xl sm:text-4xl text-center font-bold text-gray-800 mb-8">
           What Our Clients Say
         </h2>
+
+        {/* Testimonials Carousel */}
         <div className="overflow-hidden">
-          <div className="whitespace-nowrap animate-marquee flex space-x-6">
+          <div className="flex animate-marquee space-x-6">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="w-80 h- py-4 px-8 bg-white border-[1px] border-zinc-200 rounded-2xl transform hover:scale-105 transition-transform duration-300 flex-shrink-0"
+                className="w-72 sm:w-80 py-6 px-6 bg-white shadow-lg border border-gray-200 rounded-xl transform hover:scale-105 transition-transform duration-300 flex-shrink-0"
               >
-                <div className="flex items-center mb-2">
-                  {/* Name */}
+                {/* Client Info */}
+                <div className="flex items-center mb-3">
                   <span className="text-lg font-semibold text-gray-800 mr-3">
                     {testimonial.name}
                   </span>
-                  {/* Stars */}
                   <div className="flex text-[#ffd74b]">
                     {Array.from({ length: testimonial.stars }).map((_, i) => (
                       <FaStar key={i} />
                     ))}
                   </div>
                 </div>
-                {/* Message */}
-                <p className="text-xs text-gray-600 whitespace-normal break-words">
+
+                {/* Testimonial Message */}
+                <p className="text-sm text-gray-600 leading-relaxed">
                   {testimonial.message}
                 </p>
               </div>

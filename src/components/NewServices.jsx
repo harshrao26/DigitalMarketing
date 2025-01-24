@@ -105,18 +105,14 @@ const NewServices = () => {
   }, []);
 
   return (
-    <div className="text-white flex flex-col space-y- px-8 py-8">
+    <div className="text-white flex flex-col px-4 md:px-16 py-8">
       {/* Top Section */}
-      {/* <InfiniteMarquee /> */}
-
-      {/* Content Section */}
-      <div className="flex  items-center space-y-4">
-        <div className="w-1/2"></div>
-        <div className="w-1/2">
-          <p className="text-start underline text-base py-8">
+      <div className="flex flex-col-reverse md:flex-row items-center space-y-8 md:space-y-0">
+        <div className="w-full md:w-1/2">
+          <p className="text-start underline text-base py-4">
             CREATING EXPERIENCES THROUGH
           </p>
-          <p className="text-4xl font-semibold leading-snug ">
+          <p className="text-3xl md:text-4xl font-semibold leading-snug">
             Digital Services,{" "}
             <span className="text-[#FFD74B] font-semibold">
               a comprehensive <br /> approach
@@ -127,17 +123,15 @@ const NewServices = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {data.map((service, index) => (
           <div
             key={index}
-            className="service-card rounded-[20px] p-6 shadow-md hover:shadow-base transition-all ease-in-out hover:shadow-[#3b362163]"
+            className="service-card rounded-[20px] py-6 shadow-md hover:shadow-lg transition-all ease-in-out hover:shadow-[#3b362163] "
           >
-            <div className="flex flex-col ">
-              <p className="textxl">{service.icon}</p>
-              <h3 className="text-4xl font-semibold  mb-4">
-                {service.heading}
-              </h3>
+            <div className="flex flex-col">
+              <p className="text-xl">{service.icon}</p>
+              <h3 className="text-2xl font-semibold mb-4">{service.heading}</h3>
             </div>
             <ul className="space-y-2">
               {service.para.map((point, idx) => (
