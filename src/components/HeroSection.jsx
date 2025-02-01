@@ -66,7 +66,7 @@ const HeroSection = () => {
       />
 
       <div
-        className="absolute top-0 left-0 w-full h-full object-cover bg-[#000000d8] "
+        className="absolute top-0 left-0 w-full h-full object-cover bg-[#00000081] "
       
       >
 

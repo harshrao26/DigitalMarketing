@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logowhite from "../assets/logowhite.png";
+import logowhite from "../assets/logoy.png";
 import logoblack from "../assets/logoblack.png";
 import ModelForm from "./ModelForm";
 import { Link } from "react-router-dom";
@@ -38,7 +38,7 @@ const Navbar = () => {
           <img
             src={isScrolled ? logowhite : logowhite}
             alt="Logo"
-            className="h-8"
+            className="h-10"
           />
          </Link>
 

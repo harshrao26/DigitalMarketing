@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
-import logoblack from "../assets/logoblack.png";
+import logoblack from "../assets/logox.png";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Logo and Description */}
         <div className="col-span-2 flex flex-col">
           <div className="flex items-center mb-4">
-            <img src={logoblack} alt="Logo" className=" h-10 mr-3 " />
+            <img src={logoblack} alt="Logo" className=" h-20 mr-3 " />
           </div>
           <p className="mb-6 text-sm text-black/90 leading-relaxed">
          A multi award-winning Full Service Digital Marketing Agency providing a broad spectrum of digital solutions. Our headquarters are in the UK, with branches in multiple locations around the world.
