@@ -5,6 +5,7 @@ import work2 from "../assets/work2.png";
 import work4 from "../assets/work4.png";
 import work6 from "../assets/work6.png";
 import { FiChevronDown } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const CaseStudy = () => {
   const data = [
@@ -47,9 +48,9 @@ const CaseStudy = () => {
           We always put our clients first to deliver our best time after time.
           Below is some of our proudest work.
         </p>
-        <p className="text-lg md:text-2xl uppercase underline transition-all ease-in-out cursor-pointer">
+        <Link to='/projects' className="text-lg md:text-2xl uppercase underline transition-all ease-in-out cursor-pointer">
           View All Case Study
-        </p>
+        </Link>
       </div>
 
       {/* Right Section */}
@@ -58,7 +59,7 @@ const CaseStudy = () => {
         <div className="overflow-y-auto w-full md:w-[50vw] h-full scrollbar-hide relative">
           {/* Scroll Down Indicator */}
           <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-            <p className="flex items-center text-sm md:text-xl font-semibold">
+            <p className="md:flex  items-center text-sm md:text-xl font-semibold hidden">
               Scroll Here <FiChevronDown className="text-2xl md:text-3xl text-black" />
             </p>
           </div>

@@ -44,16 +44,16 @@ const NewServices = () => {
         "Boost reach with targeted strategies.",
       ],
     },
-    {
-      heading: "Lead Generation",
-      link: "/lead-generation",
-      icon: <FaChartLine className="text-green-400 text-5xl mb-2" />,
-      para: [
-        "Generate quality leads for your business.",
-        "Increase sales opportunities.",
-        "Streamline the lead capture process.",
-      ],
-    },
+    // {
+    //   heading: "Lead Generation",
+    //   link: "/lead-generation",
+    //   icon: <FaChartLine className="text-green-400 text-5xl mb-2" />,
+    //   para: [
+    //     "Generate quality leads for your business.",
+    //     "Increase sales opportunities.",
+    //     "Streamline the lead capture process.",
+    //   ],
+    // },
     {
       heading: "Graphic Designing",
       link: "/graphic-designing",

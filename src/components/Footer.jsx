@@ -13,7 +13,9 @@ const Footer = () => {
             <img src={logoblack} alt="Logo" className=" h-20 mr-3 " />
           </div>
           <p className="mb-6 text-sm text-black/90 leading-relaxed">
-         A multi award-winning Full Service Digital Marketing Agency providing a broad spectrum of digital solutions. Our headquarters are in the UK, with branches in multiple locations around the world.
+            A multi award-winning Full Service Digital Marketing Agency
+            providing a broad spectrum of digital solutions. Our headquarters
+            are in the UK, with branches in multiple locations around the world.
           </p>
           <button className="px-6 py-2 bg-black text-[#FFD74B] font-semibold rounded-md transition">
             Learn More
@@ -21,7 +23,7 @@ const Footer = () => {
         </div>
 
         {/* Quick Links */}
-         <div>
+        <div>
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             {["About", "Services", "Career"].map((link, index) => (
@@ -57,20 +59,20 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Our Addresses</h3>
           <div className="space-y-4 text-sm text-black/90">
             <p>
-              <strong>India:</strong> 1st Floor LHPS Building, Sector-7, Vikas
-              Nagar, Lucknow-226022
-              <br />
-              <strong>Contact:</strong> +91-7007016231
-            </p>
-            <p>
               <strong>Dubai:</strong> Building A1, Dubai Digital Park, Dubai
               Silicon Oasis, Dubai, UAE
               <br />
               <strong>Contact:</strong> +91-9721080912
             </p>
+            <p>
+              <strong>India:</strong> 1st Floor LHPS Building, Sector-7, Vikas
+              Nagar, Lucknow-226022
+              <br />
+              <strong>Contact:</strong> +91-7007016231
+            </p>
           </div>
           <div className="mt-6  text-black/90 text-2xl">
-            advertfuros@gmail.com
+            <p>media@advertfuros.com</p>
           </div>
         </div>
       </div>

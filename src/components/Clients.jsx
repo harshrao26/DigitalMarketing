@@ -4,10 +4,11 @@ import c2 from "../assets/c2.jpg";
 import c3 from "../assets/c3.jpg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import {Link} from 'react-router-dom'
 gsap.registerPlugin(ScrollTrigger);
 
 const Marquee = () => {
+  
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -37,9 +38,9 @@ const Marquee = () => {
               Global Success
             </span>
           </h2>
-          <p className="text-base md:text-lg lg:text-2xl uppercase border-b-2 border-[#FFD74B] hover:scale-110 transition-all ease-in-out mt-4 md:mt-0 md:ml-4">
+          <Link to="/about" className="text-base md:text-lg lg:text-2xl uppercase border-b-2 border-[#FFD74B] hover:scale-110 transition-all ease-in-out mt-4 md:mt-0 md:ml-4">
             Learn More About Us
-          </p>
+          </Link>
         </div>
       </div>
 

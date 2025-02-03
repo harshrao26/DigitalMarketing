@@ -31,7 +31,7 @@ const services = [
   "YouTube Marketing",
 ].sort();
 
-const MarketingForm = () => {
+export default function MarketingForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,24 +46,19 @@ const MarketingForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      // Send form data to the webhook
       const response = await fetch(
         "https://hook.eu2.make.com/ilw1pnibxprrp7myykfsy1ikekvuwvo7",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
         }
       );
 
       if (response.ok) {
         alert("Form submitted successfully!");
-        console.log("Form data sent:", formData);
-        setFormData({ name: "", email: "", contact: "", service: "" }); // Reset form
+        setFormData({ name: "", email: "", contact: "", service: "" });
       } else {
         alert("Failed to submit the form. Please try again.");
       }
@@ -74,123 +69,105 @@ const MarketingForm = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row  bg-white">
-      {/* Left Side Image */}
-      <div className="w-full lg:w-1/2 bg-gray-50 flex items-center justify-center px-4 ">
-        <img
-          src={inq}
-          alt="Marketing Illustration"
-          className="h-72 lg:h-96 max-w-full object-contain"
-        />
-      </div>
+    <div className="bg-gradient-to-br from-white via-gray-50 to-gray-100 py-10 px-6 min-h-screen flex items-center justify-center">
+      <div className="flex flex-col lg:flex-row bg-white shadow-xl rounded-md max-w-5xl w-full">
+        {/* Left Side (Image) */}
+        <div className="w-full lg:w-1/2 flex items-center justify-center p-4">
+          <img
+            src={inq}
+            alt="Marketing"
+            className="h-72 lg:h-96 w-auto object-contain"
+          />
+        </div>
 
-      {/* Right Side Form */}
-      <div className="w-full lg:w-1/2 bg-white flex items-center justify-center px-4 lg:px-12 ">
-        <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-4">
-          <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 text-center">
-            Request a Service
-          </h2>
+        {/* Right Side (Form) */}
+        <div className="w-full lg:w-1/2 p-6 lg:p-10">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 text-center">
+              Request a Service
+            </h2>
 
-          {/* Name Input */}
-          <div>
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-[#ffd74b] focus:border-[#ffd74b] sm:text-sm"
-            />
-          </div>
+            {/* Name Input */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="mt-1 px-3 py-2 w-full rounded-md border border-gray-300 focus:ring-[#ffd74b] focus:border-[#ffd74b]"
+              />
+            </div>
 
-          {/* Email Input */}
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-[#ffd74b] focus:border-[#ffd74b] sm:text-sm"
-            />
-          </div>
+            {/* Email Input */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="mt-1 px-3 py-2 w-full rounded-md border border-gray-300 focus:ring-[#ffd74b] focus:border-[#ffd74b]"
+              />
+            </div>
 
-          {/* Contact Number Input */}
-          <div>
-            <label
-              htmlFor="contact"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Contact Number
-            </label>
-            <input
-              type="tel"
-              id="contact"
-              name="contact"
-              placeholder="Enter your contact number"
-              value={formData.contact}
-              onChange={handleChange}
-              required
-              className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-[#ffd74b] focus:border-[#ffd74b] sm:text-sm"
-            />
-          </div>
+            {/* Contact Number Input */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Contact Number
+              </label>
+              <input
+                type="tel"
+                name="contact"
+                placeholder="Enter your contact number"
+                value={formData.contact}
+                onChange={handleChange}
+                required
+                className="mt-1 px-3 py-2 w-full rounded-md border border-gray-300 focus:ring-[#ffd74b] focus:border-[#ffd74b]"
+              />
+            </div>
 
-          {/* Service Dropdown */}
-          <div>
-            <label
-              htmlFor="service"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Type of Service
-            </label>
-            <select
-              id="service"
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              required
-              className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-[#ffd74b] focus:border-[#ffd74b] sm:text-sm"
-            >
-              <option value="" disabled>
-                Select a service
-              </option>
-              {services.map((service, index) => (
-                <option key={index} value={service}  className="text-black">
-                  {service}
+            {/* Service Dropdown */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Type of Service
+              </label>
+              <select
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                required
+                className="mt-1 px-3 py-2 w-full rounded-md border border-gray-300 bg-white focus:ring-[#ffd74b] focus:border-[#ffd74b]"
+              >
+                <option value="" disabled>
+                  Select a service
                 </option>
-              ))}
-            </select>
-          </div>
+                {services.map((service, index) => (
+                  <option key={index} value={service}>
+                    {service}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-          {/* Submit Button */}
-          <div>
+            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-black text-white py-2 px-4 rounded-md shadow-sm hover:bg-[#ffd74b] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffd74b]"
+              className="w-full py-2 rounded-md bg-black text-white font-semibold hover:bg-[#ffd74b] hover:text-black transition-colors"
             >
               Submit
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );
-};
-
-export default MarketingForm;
+}
