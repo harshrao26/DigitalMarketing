@@ -42,9 +42,9 @@ const CareerPage = () => {
   };
 
   return (
-    <div className="bg-gray-50  ">
+    <div className=" bg-gradient-to-r  from-blue-500 to-indigo-600  ">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r flex items-center justify-center flex-col from-blue-500 to-indigo-600 text-white py-20 px-6 h-80">
+      <div className="flex items-center justify-center flex-col text-white py-20 px-6 h-96">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Join Our Team</h1>
           <p className="text-lg">
@@ -56,7 +56,9 @@ const CareerPage = () => {
 
       {/* Why Join Us */}
       <div className="container mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold text-center mb-10">Why Join Us?</h2>
+        <h2 className="text-3xl font-bold text-center mb-10 text-white">
+          Why Join Us?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white shadow-lg rounded-lg p-6">
             <IoMdPeople className="text-4xl text-blue-600 mb-4" />
@@ -88,7 +90,7 @@ const CareerPage = () => {
       </div>
 
       {/* Job Openings */}
-      <div className="bg-gray-100 py-16 px-6">
+      <div className="bg-white py-16 px-6">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-10">
             Current Job Openings
@@ -154,14 +156,13 @@ const CareerPage = () => {
       </div>
 
       {/* Application Form */}
-      <div className="bg-gray-100 py-16 px-6">
+      {/* <div className="bg-gray-100 py-16 px-6">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-10">Apply Now</h2>
           <form
             onSubmit={handleSubmit}
             className="bg-white shadow-lg rounded-lg p-6 max-w-lg mx-auto"
           >
-            {/* Name Input */}
             <div className="mb-4">
               <label
                 htmlFor="name"
@@ -182,7 +183,6 @@ const CareerPage = () => {
               />
             </div>
 
-            {/* Email Input */}
             <div className="mb-4">
               <label
                 htmlFor="email"
@@ -203,7 +203,6 @@ const CareerPage = () => {
               />
             </div>
 
-            {/* Contact Input */}
             <div className="mb-4">
               <label
                 htmlFor="contact"
@@ -224,7 +223,6 @@ const CareerPage = () => {
               />
             </div>
 
-            {/* Position Input */}
             <div className="mb-4">
               <label
                 htmlFor="position"
@@ -245,7 +243,6 @@ const CareerPage = () => {
               />
             </div>
 
-            {/* Resume Upload */}
             <div className="mb-4">
               <label
                 htmlFor="resume"
@@ -264,7 +261,6 @@ const CareerPage = () => {
               />
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               className="w-full bg-blue-600 text-white py-3 px-4 rounded-md shadow-sm hover:bg-blue-700"
@@ -273,7 +269,7 @@ const CareerPage = () => {
             </button>
           </form>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ModelForm from "./ModelForm";
+import ModelFormPopup from "./ModelFormPopup";
 
 const StartAProject = () => {
   const [circlePosition, setCirclePosition] = useState({ x: 0, y: 0 });
@@ -81,7 +81,7 @@ const StartAProject = () => {
             >
               X
             </button>
-            <ModelForm />
+            <ModelFormPopup />
           </div>
         </div>
       )}

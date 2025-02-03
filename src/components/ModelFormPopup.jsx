@@ -72,7 +72,7 @@ export default function MarketingForm() {
     <div className=" flex items-center justify-center">
       <div className="flex flex-col lg:flex-row bg-white  max-w-5xl w-full">
         {/* Left Side (Image) */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center ">
+        <div className="w-full lg:w-1/2 hidden lg:flex items-center justify-center ">
           <img
             src={inq}
             alt="Marketing"

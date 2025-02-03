@@ -3,177 +3,154 @@ import Card from "./Card";
 import EveryPageHero from "./EveryPageHero";
 import ModelForm from "./ModelForm";
 
-// Sample data from JSON
+// Updated image URLs
 const services = [
   {
     title: "WhatsApp Chatbot",
     description:
-      "Businesses may use Digital Jugglers WhatsApp chatbot services to improve customer experiences.",
-    image: "https://via.placeholder.com/400x300",
+      "Businesses may use WhatsApp chatbot services to improve customer experiences.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkJDMBo-x9MztMBKKDJj8V-L--ggvCa1M5hg&s",
   },
   {
     title: "Digital Marketing",
     description:
-      "Provides businesses collaboration friendly environment to attract new possible prospects.",
+      "Provides businesses a collaboration-friendly environment to attract new prospects.",
     image:
-      "https://digitaljugglers.com/wp-content/uploads/2020/11/Outdoor-Slide.png",
+      "https://zerogravitymarketing.com/wp-content/uploads/2024/01/six-main-types-of-digital-marketing.jpg",
   },
-  {
-    title: "Outdoor Marketing",
-    description:
-      "Take advantage of OOH Media to take spread message quickly to specific audience on the move.",
-    image: "https://via.placeholder.com/400x300",
-  },
+
   {
     title: "Social Media Management",
     description:
-      "Relevant tools facilitate authenticity, encourage audience engagement, generate media coverage.",
-    image: "https://via.placeholder.com/400x300",
+      "Manage your brand presence with expert social media strategies.",
+    image:
+      "https://entail-assets.com/mayple/socialmediamanagement-1702282769682.jpg",
   },
   {
     title: "Search Engine Optimization",
     description:
-      "Majority internet users’ click on the first five links on Google, be one of them.",
-    image: "https://via.placeholder.com/400x300",
+      "Be among the top search results and attract more organic traffic.",
+    image:
+      "https://cdn.botpenguin.com/assets/website/Search_Engine_Optimization_d547319792.webp",
   },
   {
     title: "Lead Generation",
     description:
-      "Generating lead on digital media is a fast and effective tool with high conversion rates which brings new customers.",
-    image: "https://via.placeholder.com/400x300",
+      "Effective digital lead generation strategies to grow your business.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsACNwaZjYb_id_46BFM_YoqSyNA29bUjH1g&s",
   },
   {
     title: "Image Branding",
-    description:
-      "A strong brand image equals to more customers recognizing your brand.",
-    image: "https://via.placeholder.com/400x300",
+    description: "A strong brand image equals more customer recognition.",
+    image:
+      "https://www.podssolutions.com/wp-content/uploads/2023/06/branding-agency.jpg",
   },
   {
     title: "Graphic Designing",
-    description: "With graphic designing create impressive marketing material.",
-    image: "https://digitaljugglers.com/wp-content/uploads/2020/03/PPC-CPC.jpg",
+    description: "Create impressive marketing materials with graphic design.",
+    image:
+      "https://www.sanjaywebdesigner.com/articles/wp-content/uploads/2015/01/Graphic-Design-Course.jpg",
   },
   {
     title: "PPC/CPC Advertising",
     description:
-      "Want to boost your growth? Pay-per-click (PPC) is your best choice.",
-    image: "https://digitaljugglers.com/wp-content/uploads/2020/03/PPC-CPC.jpg",
+      "Boost your brand’s growth with targeted Pay-Per-Click campaigns.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0SDv-KVbCoD230WRyMCxvLP2rzLDtacDbxA&s",
   },
   {
     title: "E-commerce Solutions",
-    description:
-      "Sound marketing strategies can help build brand awareness, drive customer loyalty.",
-    image: "https://via.placeholder.com/400x300",
+    description: "Build, manage, and scale your online business effectively.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfc-Yh3nu0nwwptpsolrJqdlqBxWRMmr6sDQ&s",
   },
   {
     title: "Branding Videos",
-    description:
-      "Videos are a passive and reliable way to build your brand in digital era.",
-    image: "https://via.placeholder.com/400x300",
+    description: "Tell your brand’s story with high-quality video content.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7YX40VhihnmlVSKFe0eMG87q88pxBybJ1rg&s",
   },
   {
     title: "YouTube Marketing",
-    description:
-      "Video marketing has become a growing and dominating trend, globally.",
-    image: "https://via.placeholder.com/400x300",
+    description: "Utilize YouTube marketing strategies to grow your brand.",
+    image:
+      "https://clonefutura.com//Uploads/Courses/FeaturedImage/1a6af845-4ee3-4f32-a2fc-763d71d35875/youtube%20marketing%20logo.png",
   },
   {
     title: "Wikipedia Page Creation",
-    description:
-      "Online encyclopedia accessed by 500 million unique visitors in 250 languages.",
-    image: "https://via.placeholder.com/400x300",
+    description: "Boost credibility with a well-optimized Wikipedia page.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSenzJJW4uv9uj-Zaj64mE1Lz5PfgP_cnwvYA&s",
   },
   {
     title: "Blue Tick Verification",
-    description:
-      "Now you can get the blue tick in front of your brand name on social media.",
+    description: "Get the blue tick for brand authenticity on social media.",
     image:
-      "https://digitaljugglers.com/wp-content/uploads/2020/03/Blue-tick.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRsMzKAJox55E-vlGlHfasmQMnqTwQ0MAvQA&s",
   },
   {
     title: "Brand Identity",
-    description:
-      "Consistency is the key in creating and maintaining your brand identity.",
-    image: "https://via.placeholder.com/400x300",
-  },
-  {
-    title: "Whiteboard Animation",
-    description:
-      "With animation, swiftly explain complicated stuff without losing mass appeal and attract potential customers towards your brand.",
+    description: "Create a strong and recognizable brand identity.",
     image:
-      "https://digitaljugglers.com/wp-content/uploads/2020/03/Whiteboard.jpg",
+      "https://rvncreative.com/wp-content/uploads/2019/12/RC_12_11_NailingBrandIdentity.jpg",
   },
+
   {
     title: "Web Development",
-    description:
-      "A one-stop solution for increasing audience reach and grow your business by reaching new demographics.",
-    image: "https://via.placeholder.com/400x300",
+    description: "Develop a powerful website to reach more customers.",
+    image:
+      "https://cdn.prod.website-files.com/6344c9cef89d6f2270a38908/673f2a3b44c1ed4901bb43bb_6386328bea96dffacc89946b_d1.webp",
   },
-  {
-    title: "Virtual Reality/Augmented Reality",
-    description:
-      "Maintain the pace of your brand with new advances in consumer gratification.",
-    image: "https://via.placeholder.com/400x300",
-  },
+
   {
     title: "Application Development",
-    description:
-      "User-friendly android and iOS applications to outreach your brand to demographics.",
-    image: "https://via.placeholder.com/400x300",
+    description: "Build intuitive mobile and web applications for your brand.",
+    image:
+      "https://www.businessofapps.com/wp-content/uploads/2020/08/zymr8_steps_the_mobile_app_dev_lifecycle_cover.jpg",
   },
   {
     title: "Customized Software",
     description:
-      "Explore Enterprise Resource Planning, Customer Relationship Management with us.",
+      "Tailor-made software solutions to streamline business processes.",
     image:
-      "https://digitaljugglers.com/wp-content/uploads/2020/03/Customized.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT69a9wmgq_W4sp995D6FV6rJBqtE1eaa_NMg&s",
   },
   {
     title: "PR Activity",
-    description:
-      "Engage and build relationship with your audience by telling your business story.",
+    description: "Enhance your brand’s image with strategic PR activities.",
     image:
-      "https://digitaljugglers.com/wp-content/uploads/2020/03/PR-Activity.jpg",
+      "https://buzzmoremedia.com/wp-content/uploads/2021/06/Public-Relations-1024x569.jpg",
   },
   {
     title: "Social Media Marketing",
     description:
-      "Better interpret your marketplace awareness and possible mode that lead to traffic generation.",
-    image: "https://via.placeholder.com/400x300",
+      "Generate brand awareness with targeted social media campaigns.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGOr_yWyT9PF9TQlpvNAkfycRIuIjYBZiFA&s",
   },
   {
     title: "Digital PR",
     description:
-      "Digital PR is proficiently maintaining an approbatory online illustration by the organization. A Digital PR Agency nourishes a company via online blogs, websites, and Social Media.",
-    image: "https://digitaljugglers.com/wp-content/uploads/2022/06/diigt.jpg",
-  },
-  {
-    title: "Metaverse",
-    description:
-      "Imagine a virtual world where people can live, work, shop, and socialise all from the comfort of their own home. This is referred to as the metaverse.",
+      "Maintain a positive online presence through Digital PR strategies.",
     image:
-      "https://digitaljugglers.com/wp-content/uploads/2022/06/metaverse-l.jpg",
+      "https://bs-uploads.toptal.io/blackfish-uploads/public_files/unnamed-7569d41de69d6563b0f2fc0ea8e33b3f.jpg",
   },
+
   {
     title: "E-Commerce Store Management",
     description:
-      "It takes a lot of effort to run an online store and provide an outstanding customer experience.",
+      "Optimize and manage your online store for maximum efficiency.",
     image:
-      "https://digitaljugglers.com/wp-content/uploads/2022/06/e-commerce.jpg",
+      "https://swifnix.com/wp-content/uploads/2022/10/E-commerce-store.jpg",
   },
-  {
-    title: "Digital Media Election Campaign Management",
-    description:
-      "The digital media campaign operation is one of the enormously efficacious and puissant tools.",
-    image:
-      "https://digitaljugglers.com/wp-content/uploads/2022/06/election.jpg",
-  },
+
   {
     title: "Influencer Marketing",
-    description:
-      "Influencer marketing is a type of social media marketing that relies on endorsements and product mentions from influencers–people who have a significant social following and are thought to be experts in their field.",
+    description: "Leverage influencers to grow your brand’s reach.",
     image:
-      "https://digitaljugglers.com/wp-content/uploads/2022/06/influencer-ma.jpg",
+      "https://recursos.audiense.com/hubfs/design/solutions/02_Influencer_Marketing-2.svg",
   },
 ];
 
@@ -181,25 +158,24 @@ const Services = () => {
   return (
     <>
       <EveryPageHero text="Services" />
-      <div className="px-16 mt-8 bg-white py-16">
-        <p className="text-4xl">
-          Develop, Advertise, and Advance <br /> with{" "}
-          <span className="font-semibold">Advert Furos</span>
+      <div className="px-6 sm:px-12 lg:px-16 mt-8 bg-white py-16 text-center lg:text-left">
+        <p className="text-3xl sm:text-4xl font-semibold">
+          Develop, Advertise, and Advance <br className="hidden sm:block" />{" "}
+          with <span className="text-[#FFD74B]">Advert Furos</span>
         </p>
-        <p>The best business consultancy in India</p>
+        <p className="mt-2 text-lg text-gray-600">
+          The best business consultancy in India
+        </p>
         <br />
-        <p>
-          We recognize how crucial it is to keep up an active internet presence.
-          With our extensive range of services, we can help you advertise your
-          brand, improve your search engine ranking with SEO, establish a
-          connection with your target and potential customers on social media,
-          raise brand awareness and identity, add a creative touch to your
-          website and posts with graphic design, create animation videos for all
-          your needs, and much more. By doing these things, you can boost your
-          sales and success rate at a reasonable cost.
+        <p className="text-gray-700 leading-relaxed">
+          We recognize how crucial it is to keep up an active online presence.
+          With our extensive range of services, we help businesses advertise
+          their brand, improve search engine ranking, connect with potential
+          customers, and create a powerful digital presence at a **reasonable
+          cost**.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8 bg-white">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6 sm:px-12 lg:px-16 py-8 bg-white">
         {services.map((service, index) => (
           <Card
             key={index}
