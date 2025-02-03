@@ -69,10 +69,10 @@ export default function MarketingForm() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-black via-gray-900 to-gray-950 py-10 px-6 min-h-screen flex items-center justify-center">
-      <div className="flex flex-col lg:flex-row bg-white shadow-xl rounded-md max-w-5xl w-full">
+    <div className=" flex items-center justify-center">
+      <div className="flex flex-col lg:flex-row bg-white  max-w-5xl w-full">
         {/* Left Side (Image) */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center p-4">
+        <div className="w-full lg:w-1/2 flex items-center justify-center ">
           <img
             src={inq}
             alt="Marketing"

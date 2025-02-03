@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logowhite from "../assets/logoy.png";
 import logoblack from "../assets/logoblack.png";
-import ModelForm from "./ModelForm";
+import ModelFormPopup from "./ModelFormPopup";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -152,14 +152,14 @@ const Navbar = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[200]">
-          <div className="bg-white p-6 rounded-lg shadow-lg relative">
+          <div className="bg-white   shadow-lg relative">
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-2 right-4 text-gray-700 text-xl font-semibold"
+              className="absolute top-2 right-4 text-gray-700 text-3xl "
             >
-              X
+              x
             </button>
-            <ModelForm />
+            <ModelFormPopup />
           </div>
         </div>
       )}
