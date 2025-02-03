@@ -5,12 +5,50 @@ import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   const teamMembers = [
-    { name: "Member 1", image: "/path/to/image1.jpg" },
-    { name: "Member 2", image: "/path/to/image2.jpg" },
-    { name: "Member 1", image: "/path/to/image1.jpg" },
-    { name: "Member 2", image: "/path/to/image2.jpg" },
-    { name: "Member 1", image: "/path/to/image1.jpg" },
-    { name: "Member 2", image: "/path/to/image2.jpg" },
+    {
+      name: "Member 1",
+      image: "https://bird.co.uk/wp-content/uploads/Phil500x500-500x500.jpg",
+    },
+    {
+      name: "Member 2",
+      image: "https://bird.co.uk/wp-content/uploads/Lewis500x500-500x500.jpg",
+    },
+    {
+      name: "Member 1",
+      image:
+        "https://bird.co.uk/wp-content/uploads/2023/10/Jason-Scott-Colour-Black-Background-500-2-2.jpg",
+    },
+    {
+      name: "Member 2",
+      image: "https://bird.co.uk/wp-content/uploads/Luke500x500-500x500.jpg",
+    },
+    {
+      name: "Member 1",
+      image:
+        "https://bird.co.uk/wp-content/uploads/Jess500x500-cv2500-500x500.jpg",
+    },
+    {
+      name: "Member 2",
+      image: "https://bird.co.uk/wp-content/uploads/2023/10/fran-500.jpg",
+    },
+    {
+      name: "Member 2",
+      image: "https://bird.co.uk/wp-content/uploads/callum500x5001-500x500.jpg",
+    },
+    {
+      name: "Member 2",
+      image: "https://bird.co.uk/wp-content/uploads/Jaden500x500-500x500.jpg",
+    },
+    {
+      name: "Member 2",
+      image:
+        "https://bird.co.uk/wp-content/uploads/2023/11/Kabir-Birdi-Black-Background-500x500-3.jpg",
+    },
+    {
+      name: "Member 2",
+      image:
+        "https://bird.co.uk/wp-content/uploads/2023/11/Bird_Marketing-Steve-500-2.jpg",
+    },
     // ... add more members
   ];
       useEffect(() => {
@@ -139,7 +177,7 @@ const AboutUs = () => {
                   alt={member.name}
                   className="rounded-full mb-2 w-32 h-32 object-cover"
                 />
-                <p className="text-sm">{member.name}</p>
+                {/* <p className="text-sm">{member.name}</p> */}
               </div>
             ))}
           </div>

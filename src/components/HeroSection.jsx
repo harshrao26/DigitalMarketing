@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import gsap from "gsap";
 import Hero from "../assets/hero.gif";
 import herovideo from "../assets/herovideo.mp4";
-
+import { Link } from "react-router-dom";
 const HeroSection = () => {
   const headingRef = useRef(null);
   const paragraphRef = useRef(null);
@@ -100,18 +100,20 @@ const HeroSection = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4">
-          <button
+          <Link
+            to="/services"
             ref={(el) => (buttonRefs.current[0] = el)}
             className="bg-[#FFD74B] text-black px-6 py-3 rounded-full font-semibold shadow-md hover:scale-105 transition-transform duration-300"
           >
             Get Started
-          </button>
-          <button
+          </Link>
+          <Link
+            to="/about"
             ref={(el) => (buttonRefs.current[1] = el)}
             className="bg-transparent border-2 border-[#FFD74B] px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-[#FFD74B] hover:text-black transition-all duration-300"
           >
             Learn More <FaArrowRight />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

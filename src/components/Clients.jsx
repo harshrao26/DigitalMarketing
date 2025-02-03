@@ -45,8 +45,8 @@ const Marquee = () => {
       </div>
 
       {/* Marquee Section */}
-      <div className="relative flex space-x-6 animate-marquee">
-        {[c1, c2, c3, c1, c2, c3, c1, c2, c3].map((src, index) => (
+      <div className="flex flex-col items-center gap-4 overflow-hidden">
+        {[c1, c2, c3, ].map((src, index) => (
           <img
             key={index}
             src={src}
