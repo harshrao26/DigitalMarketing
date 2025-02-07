@@ -62,7 +62,7 @@ const Footer = () => {
               <strong>Dubai:</strong> Building A1, Dubai Digital Park, Dubai
               Silicon Oasis, Dubai, UAE
               <br />
-              <strong>Contact:</strong> +91-9721080912
+              <strong>Contact:</strong> +91-8303765331
             </p>
             <p>
               <strong>India:</strong> 1st Floor LHPS Building, Sector-7, Vikas
