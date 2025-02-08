@@ -6,7 +6,7 @@ const Whatsapp = () => {
     <div className="fixed z-40 h-16 bottom-1 right-8  cursor-pointer">
       {" "}
       <a
-        href="https://wa.me/9936578800"
+        href="https://wa.me/7233811034"
         target="_blank"
         rel="noopener noreferrer"
         className="md:block lg:block hidden"
@@ -18,7 +18,7 @@ const Whatsapp = () => {
         />
       </a>
       <a
-        href="https://wa.me/9936578800"
+        href="https://wa.me/7233811034"
         target="_blank"
         rel="noopener noreferrer"
         className="md:hidden lg:hidden block"
