@@ -47,12 +47,22 @@ export default function MarketingForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const now = new Date();
+      const offset = 330; // 5 hours 30 mins in minutes
+      const istDate = new Date(now.getTime() + offset * 60 * 1000);
+      const timestamp = istDate.toISOString().replace("T", " ").split(".")[0];
+
+      const dataToSend = {
+        ...formData,
+        timestamp,
+      };
+
       const response = await fetch(
         "https://hook.eu2.make.com/ilw1pnibxprrp7myykfsy1ikekvuwvo7",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(dataToSend),
         }
       );
 
@@ -71,7 +81,6 @@ export default function MarketingForm() {
   return (
     <div className="bg-gradient-to-br from-black via-gray-900 to-gray-950 py-10 px-6 min-h-screen flex items-center justify-center">
       <div className="flex flex-col lg:flex-row bg-white shadow-xl rounded-md max-w-5xl w-full my-10">
-        {/* Left Side (Image) */}
         <div className="w-full lg:w-1/2 flex items-center justify-center p-4">
           <img
             src={inq}
@@ -79,15 +88,11 @@ export default function MarketingForm() {
             className="h-72 lg:h-96 w-auto object-contain"
           />
         </div>
-
-        {/* Right Side (Form) */}
         <div className="w-full lg:w-1/2 p-6 lg:p-10">
           <form onSubmit={handleSubmit} className="space-y-5">
             <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 text-center">
               Request a Service
             </h2>
-
-            {/* Name Input */}
             <div>
               <label className="block text-sm font-medium text-gray-700">
                 Name
@@ -102,8 +107,6 @@ export default function MarketingForm() {
                 className="mt-1 px-3 py-2 w-full rounded-md border border-gray-300 focus:ring-[#ffd74b] focus:border-[#ffd74b]"
               />
             </div>
-
-            {/* Email Input */}
             <div>
               <label className="block text-sm font-medium text-gray-700">
                 Email
@@ -118,8 +121,6 @@ export default function MarketingForm() {
                 className="mt-1 px-3 py-2 w-full rounded-md border border-gray-300 focus:ring-[#ffd74b] focus:border-[#ffd74b]"
               />
             </div>
-
-            {/* Contact Number Input */}
             <div>
               <label className="block text-sm font-medium text-gray-700">
                 Contact Number
@@ -134,8 +135,6 @@ export default function MarketingForm() {
                 className="mt-1 px-3 py-2 w-full rounded-md border border-gray-300 focus:ring-[#ffd74b] focus:border-[#ffd74b]"
               />
             </div>
-
-            {/* Service Dropdown */}
             <div>
               <label className="block text-sm font-medium text-gray-700">
                 Type of Service
@@ -157,8 +156,6 @@ export default function MarketingForm() {
                 ))}
               </select>
             </div>
-
-            {/* Submit Button */}
             <button
               type="submit"
               className="w-full py-2 rounded-md bg-black text-white font-semibold hover:bg-[#ffd74b] hover:text-black transition-colors"
