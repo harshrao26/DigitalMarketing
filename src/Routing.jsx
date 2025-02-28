@@ -7,6 +7,7 @@ import ModelForm from "./components/ModelForm.jsx"; // Create BlogDetail compone
 import ServicesSection from "./components/ServicesSection.jsx"; // Create BlogDetail component
 import Projects from "./components/Projects.jsx"; // Create BlogDetail component
 import AboutUs from "./components/AboutUs.jsx"; // Create BlogDetail component
+import NotFound from "./components/NotFound.jsx"; // Create BlogDetail component
 import { Link, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
         <Route path="/services" element={<ServicesSection />} />
         <Route path="/career" element={<Career />} />
         <Route path="/projects" element={<Projects />} />
