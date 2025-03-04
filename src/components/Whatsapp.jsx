@@ -17,8 +17,9 @@ const Whatsapp = () => {
           className="fixed z-40 h-16 bottom-1 right-8  cursor-pointer"
         />
       </a>
+      
       <a
-        href="https://wa.me/7233811034"
+        href="https://wa.me/+9710569327062"
         target="_blank"
         rel="noopener noreferrer"
         className="md:hidden lg:hidden block"
