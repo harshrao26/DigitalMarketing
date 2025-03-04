@@ -62,13 +62,13 @@ const Footer = () => {
               <strong>Dubai:</strong> Building A1, Dubai Digital Park, Dubai
               Silicon Oasis, Dubai, UAE
               <br />
-              <strong>Contact:</strong> +91-8303765331
+              <strong>Contact:</strong> +056-9327062
             </p>
             <p>
               <strong>India:</strong> 1st Floor LHPS Building, Sector-7, Vikas
               Nagar, Lucknow-226022
               <br />
-              <strong>Contact:</strong> +91-7233811034
+              <strong>Contact:</strong> +91-7007016231
             </p>
           </div>
           <div className="mt-6  text-black/90 text-2xl">
@@ -84,15 +84,18 @@ const Footer = () => {
           Furos
         </p>
         <div className="flex justify-center space-x-6">
-          <a href="#" className="hover:text-gray-950 transition">
+          {/* <a href="#" className="hover:text-gray-950 transition">
             <FaLinkedin size={24} />
-          </a>
-          <a href="#" className="hover:text-gray-950 transition">
+          </a> */}
+          <a
+            href="https://www.instagram.com/advertfuros/"
+            className="hover:text-gray-950 transition"
+          >
             <FaInstagram size={24} />
           </a>
-          <a href="#" className="hover:text-gray-950 transition">
+          {/* <a href="#" className="hover:text-gray-950 transition">
             <FaFacebook size={24} />
-          </a>
+          </a> */}
         </div>
       </div>
     </footer>
