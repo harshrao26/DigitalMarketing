@@ -74,7 +74,17 @@ const Footer = () => {
           <div className="mt-6  text-black/90 text-2xl">
             <p>media@advertfuros.com</p>
           </div>
+       <div className="mt-8">
+       <a
+            href="https://www.instagram.com/advertfuros/"
+            className="hover:text-gray-950 transition"
+          >
+            <FaInstagram size={24} />
+          </a>
+       </div>
         </div>
+
+       
       </div>
 
       {/* Footer Bottom */}
@@ -83,20 +93,7 @@ const Footer = () => {
           Privacy Policy | Terms and Conditions | Sitemap | © 2019 - 2025 Advert
           Furos
         </p>
-        <div className="flex justify-center space-x-6">
-          {/* <a href="#" className="hover:text-gray-950 transition">
-            <FaLinkedin size={24} />
-          </a> */}
-          <a
-            href="https://www.instagram.com/advertfuros/"
-            className="hover:text-gray-950 transition"
-          >
-            <FaInstagram size={24} />
-          </a>
-          {/* <a href="#" className="hover:text-gray-950 transition">
-            <FaFacebook size={24} />
-          </a> */}
-        </div>
+       
       </div>
     </footer>
   );
